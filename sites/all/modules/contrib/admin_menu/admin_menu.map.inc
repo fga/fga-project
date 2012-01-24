@@ -1,5 +1,4 @@
 <?php
-// $Id: admin_menu.map.inc,v 1.5 2011/01/06 23:27:40 sun Exp $
 
 /**
  * @file

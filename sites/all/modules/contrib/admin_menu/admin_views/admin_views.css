@@ -1,23 +1,20 @@
-/* $Id: admin_views.css,v 1.2 2010/03/11 01:14:17 sun Exp $ */
 
-.view-admin-content-comment .views-exposed-form .form-text,
-.view-admin-content-node .views-exposed-form .form-text,
-.view-admin-content-taxonomy .views-exposed-form .form-text,
-.view-admin-user-user .views-exposed-form .form-text {
+.admin-views-view .views-exposed-form .form-text {
   width: 10em;
 }
 
-.view-admin-content-comment .views-exposed-form .description,
-.view-admin-content-node .views-exposed-form .description,
-.view-admin-content-taxonomy .views-exposed-form .description,
-.view-admin-user-user .views-exposed-form .description {
+.admin-views-view .views-exposed-form .description {
   display: none;
 }
 
-.view-admin-content-comment #views-bulk-operations-dropdown .form-item,
-.view-admin-content-node #views-bulk-operations-dropdown .form-item,
-.view-admin-content-taxonomy #views-bulk-operations-dropdown .form-item,
-.view-admin-user-user #views-bulk-operations-dropdown .form-item {
+.admin-views-view .views-exposed-form .views-submit-button,
+.admin-views-view .views-exposed-form .views-reset-button {
+  padding-right: 0;
+}
+
+.admin-views-view .form-item-operation {
+  float: left;
   margin-top: 0;
   margin-bottom: 0;
+  margin-right: 1em;
 }

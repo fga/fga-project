@@ -1,5 +1,4 @@
 <?php
-// $Id: admin_menu.test,v 1.15 2010/02/20 02:17:55 sun Exp $
 
 /**
  * @file
@@ -13,7 +12,9 @@ class AdminMenuWebTestCase extends DrupalWebTestCase {
   function setUp() {
     // Enable admin menu module and any other modules.
     $args = func_get_args();
-    call_user_func_array(array($this, 'parent::setUp'), array_merge(array('admin_menu'), $args));
+    $modules = $args[0];
+    $modules[] = 'admin_menu';
+    parent::setUp($modules);
 
     // Disable client-side caching.
     variable_set('admin_menu_cache_client', FALSE);
@@ -65,8 +66,7 @@ class AdminMenuPermissionsTestCase extends AdminMenuWebTestCase {
   }
 
   function setUp() {
-    // Additionally enable contact module.
-    parent::setUp('contact');
+    parent::setUp(array('contact'));
   }
 
   /**

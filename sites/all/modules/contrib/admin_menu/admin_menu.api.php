@@ -1,5 +1,4 @@
 <?php
-// $Id: admin_menu.api.php,v 1.6 2011/01/06 23:27:40 sun Exp $
 
 /**
  * @file
@@ -45,23 +44,39 @@ function hook_admin_menu_map() {
 }
 
 /**
- * Alter content in Administration menu bar before it is rendered.
+ * Add to the administration menu content before it is rendered.
  *
- * @param $content
- *   A structured array suitable for drupal_render(), at the very least
- *   containing the keys 'menu' and 'links'.  Most implementations likely want
- *   to alter or add to 'links'.
+ * @param array $content
+ *   A structured array suitable for drupal_render(), containing:
+ *   - menu: The administrative menu of links below the path 'admin/*'.
+ *   - icon: The icon menu.
+ *   - user: The user items and links.
+ *   Passed by reference.
  *
- * $content['menu'] contains the HTML representation of the 'admin_menu' menu
- * tree.
- * @see admin_menu_menu_alter()
- *
- * $content['links'] contains additional top-level links in the Administration
- * menu, such as the icon menu or the logout link. You can add more items here
- * or play with the #weight attribute to customize them.
- * @see theme_admin_menu_links()
+ * @see hook_admin_menu_output_alter()
+ * @see admin_menu_links_menu()
  * @see admin_menu_links_icon()
  * @see admin_menu_links_user()
+ * @see theme_admin_menu_links()
+ */
+function hook_admin_menu_output_build(&$content) {
+}
+
+/**
+ * Change the administration menu content before it is rendered.
+ *
+ * @param array $content
+ *   A structured array suitable for drupal_render(), containing:
+ *   - menu: The administrative menu of links below the path 'admin/*'.
+ *   - icon: The icon menu.
+ *   - user: The user items and links.
+ *   Passed by reference.
+ *
+ * @see hook_admin_menu_output_build()
+ * @see admin_menu_links_menu()
+ * @see admin_menu_links_icon()
+ * @see admin_menu_links_user()
+ * @see theme_admin_menu_links()
  */
 function hook_admin_menu_output_alter(&$content) {
   // Add new top-level item.

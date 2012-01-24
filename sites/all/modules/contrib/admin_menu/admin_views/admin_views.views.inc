@@ -1,5 +1,4 @@
 <?php
-// $Id: admin_views.views.inc,v 1.2 2010/03/11 01:14:17 sun Exp $
 
 /**
  * @file

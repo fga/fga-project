@@ -1,5 +1,4 @@
 <?php
-// $Id: admin_content_taxonomy.inc,v 1.5 2010/03/11 02:22:13 sun Exp $
 
 $view = new view;
 $view->name = 'admin_content_taxonomy';
