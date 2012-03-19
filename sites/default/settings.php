@@ -177,7 +177,16 @@
  *   );
  * @endcode
  */
-$databases = array();
+$databases ['default']['default'] = array(
+     'driver' => 'mysql',
+     'database' => 'db_dev',
+     'username' => 'liza',
+     'password' => 'm0l0t0v',
+     'host' => 'localhost',
+     'prefix' => '',
+    );
+
+
 
 /**
  * Access control for update.php script.
@@ -190,7 +199,7 @@ $databases = array();
  * After finishing the upgrade, be sure to open this file again and change the
  * TRUE back to a FALSE!
  */
-$update_free_access = FALSE;
+$update_free_access = TRUE;
 
 /**
  * Salt for one-time login links and cancel links, form tokens, etc.

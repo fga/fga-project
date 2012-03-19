@@ -1,1 +1,58 @@
-/* This file will hold the main styles for your website. */
+/** 
+
+Modified: 18 MAR 2012
+by      : Liza Sabater
+for     : FGA Project
+
+*/
+
+a:active,
+a:link, 
+a:visited {
+text-decoration:none;
+font-weight: bold;
+color: #444;
+}
+
+#region-branding {
+display: none;
+}
+
+h2 .pane-title{
+
+}
+
+
+.left-column{
+ margin: 10px 0 0 0;
+}
+
+
+right-column{
+ padding: 0px;
+}
+
+
+.panel-panel .unit li{
+list-style:none;
+}
+
+#site-name{
+font-size:90px;
+letter-spacing: 1px;
+width: 50px;
+line-height:80%;
+margin: 20px 0;
+}
+
+#home h2{
+font-size:50px;
+}
+
+#home p{
+
+}
+
+#sidebar-menu{
+font-size: 15px;
+}
