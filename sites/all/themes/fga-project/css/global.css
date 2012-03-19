@@ -85,3 +85,8 @@ width: 300px;
 #sidebar-menu{
 font-size: 15px;
 }
+
+#column-right{
+float:right;
+margin: 0 100px 0 0;
+}
