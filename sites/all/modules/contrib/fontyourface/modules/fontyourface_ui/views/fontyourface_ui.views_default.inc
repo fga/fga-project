@@ -287,94 +287,11 @@ function fontyourface_ui_views_default_views() {
   $handler->display->display_options['filters']['license']['expose']['required'] = 0;
   $handler->display->display_options['filters']['license']['expose']['multiple'] = FALSE;
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_1');
+  /* Display: Browse */
+  $handler = $view->new_display('page', 'Browse', 'page_1');
   $handler->display->display_options['path'] = 'admin/appearance/fontyourface/browse';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Browse';
-  $handler->display->display_options['menu']['weight'] = '0';
-
-  /* Display: Google Fonts */
-  $handler = $view->new_display('page', 'Google Fonts', 'page_2');
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Font: Name */
-  $handler->display->display_options['filters']['name']['id'] = 'name';
-  $handler->display->display_options['filters']['name']['table'] = 'fontyourface_font';
-  $handler->display->display_options['filters']['name']['field'] = 'name';
-  $handler->display->display_options['filters']['name']['operator'] = 'contains';
-  $handler->display->display_options['filters']['name']['group'] = 0;
-  $handler->display->display_options['filters']['name']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['name']['expose']['operator_id'] = 'name_op';
-  $handler->display->display_options['filters']['name']['expose']['label'] = 'Name';
-  $handler->display->display_options['filters']['name']['expose']['operator'] = 'name_op';
-  $handler->display->display_options['filters']['name']['expose']['identifier'] = 'name';
-  /* Filter criterion: Tag */
-  $handler->display->display_options['filters']['tid_3']['id'] = 'tid_3';
-  $handler->display->display_options['filters']['tid_3']['table'] = 'fontyourface_tag';
-  $handler->display->display_options['filters']['tid_3']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid_3']['relationship'] = 'tid';
-  $handler->display->display_options['filters']['tid_3']['ui_name'] = 'Tag';
-  $handler->display->display_options['filters']['tid_3']['group'] = 0;
-  $handler->display->display_options['filters']['tid_3']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['tid_3']['expose']['operator_id'] = 'tid_3_op';
-  $handler->display->display_options['filters']['tid_3']['expose']['label'] = 'Tag';
-  $handler->display->display_options['filters']['tid_3']['expose']['operator'] = 'tid_3_op';
-  $handler->display->display_options['filters']['tid_3']['expose']['identifier'] = 'tag_id';
-  $handler->display->display_options['filters']['tid_3']['expose']['reduce'] = 0;
-  $handler->display->display_options['filters']['tid_3']['reduce_duplicates'] = 0;
-  $handler->display->display_options['filters']['tid_3']['type'] = 'select';
-  $handler->display->display_options['filters']['tid_3']['tag_type'] = 'tag';
-  /* Filter criterion: Subset */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'fontyourface_tag';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['relationship'] = 'tid';
-  $handler->display->display_options['filters']['tid']['ui_name'] = 'Subset';
-  $handler->display->display_options['filters']['tid']['group'] = 0;
-  $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
-  $handler->display->display_options['filters']['tid']['expose']['label'] = 'Subset';
-  $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
-  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'subset_id';
-  $handler->display->display_options['filters']['tid']['expose']['reduce'] = 0;
-  $handler->display->display_options['filters']['tid']['reduce_duplicates'] = 0;
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['tag_type'] = 'subset';
-  /* Filter criterion: Font: Foundry */
-  $handler->display->display_options['filters']['foundry']['id'] = 'foundry';
-  $handler->display->display_options['filters']['foundry']['table'] = 'fontyourface_font';
-  $handler->display->display_options['filters']['foundry']['field'] = 'foundry';
-  $handler->display->display_options['filters']['foundry']['group'] = 0;
-  $handler->display->display_options['filters']['foundry']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['foundry']['expose']['operator_id'] = 'foundry_op';
-  $handler->display->display_options['filters']['foundry']['expose']['label'] = 'Foundry';
-  $handler->display->display_options['filters']['foundry']['expose']['operator'] = 'foundry_op';
-  $handler->display->display_options['filters']['foundry']['expose']['identifier'] = 'foundry';
-  $handler->display->display_options['filters']['foundry']['expose']['reduce'] = 0;
-  /* Filter criterion: Font: License */
-  $handler->display->display_options['filters']['license']['id'] = 'license';
-  $handler->display->display_options['filters']['license']['table'] = 'fontyourface_font';
-  $handler->display->display_options['filters']['license']['field'] = 'license';
-  $handler->display->display_options['filters']['license']['operator'] = 'contains';
-  $handler->display->display_options['filters']['license']['group'] = 0;
-  $handler->display->display_options['filters']['license']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['license']['expose']['operator_id'] = 'license_op';
-  $handler->display->display_options['filters']['license']['expose']['label'] = 'License';
-  $handler->display->display_options['filters']['license']['expose']['operator'] = 'license_op';
-  $handler->display->display_options['filters']['license']['expose']['identifier'] = 'license';
-  $handler->display->display_options['filters']['license']['expose']['required'] = 0;
-  $handler->display->display_options['filters']['license']['expose']['multiple'] = FALSE;
-  /* Filter criterion: Font: Provider */
-  $handler->display->display_options['filters']['provider']['id'] = 'provider';
-  $handler->display->display_options['filters']['provider']['table'] = 'fontyourface_font';
-  $handler->display->display_options['filters']['provider']['field'] = 'provider';
-  $handler->display->display_options['filters']['provider']['value'] = array(
-    'google_fonts_api' => 'google_fonts_api',
-  );
-  $handler->display->display_options['path'] = 'admin/appearance/fontyourface/browse/google_fonts_api';
-  $handler->display->display_options['menu']['type'] = 'tab';
-  $handler->display->display_options['menu']['title'] = 'Google Fonts';
   $handler->display->display_options['menu']['weight'] = '0';
   $translatables['fontyourface_browse'] = array(
     t('Defaults'),
@@ -402,9 +319,7 @@ function fontyourface_ui_views_default_views() {
     t('Tag'),
     t('Foundry'),
     t('License'),
-    t('Page'),
-    t('Google Fonts'),
-    t('Subset'),
+    t('Browse'),
   );
 
   $views[$view->name] = $view;
